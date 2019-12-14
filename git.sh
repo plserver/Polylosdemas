@@ -8,10 +8,10 @@ git push -u pol master
 
 if [ $? -eq 0 ];
 then
-        echo "[CORRECT] Commit realizado el dia `$date`" >> /var/log/log_commit.txt
-        python /scripts-produccion/enviarMail.py "[CORRECT]" "Commit realizado"
+        echo "[CORRECT] Commit de Pol realizado el dia `$date`" >> /var/log/log_commit.txt
+        python /scripts-produccion/enviarMailPau.py "[CORRECT]" "Commit realizado Pol"
 else
-        echo "[ERROR] Commit realizado el dia $date" >> /var/log/log_commit.txt
-        python /scripts-produccion/enviarMail.py "[ERROR]" "Commit erroneo"
+        echo "[ERROR] Commit de Pol no realizado el dia $date" >> /var/log/log_commit.txt
+        python /scripts-produccion/enviarMailPau.py "[ERROR]" "Commit erroneo Pol"
 fi
 
